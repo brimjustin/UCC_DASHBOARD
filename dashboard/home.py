@@ -8,7 +8,7 @@ from PIL import Image
 
 def app():
     # UCC Data CSV to DF
-    tdf_csv = Path(__file__).parents[1] / 'merged_tdf.csv'
+    tdf_csv = Path(__file__).parents[1] / 'data/merged_tdf.csv'
     tdf = pd.read_csv(tdf_csv)
 
     # NH CSV to DF
