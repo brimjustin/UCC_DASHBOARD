@@ -45,5 +45,5 @@ for i, row in tdf.iterrows():
 merged_df = pd.concat([tdf, kbe], ignore_index=True)
 
 
-merged_df.to_csv(path_or_buf=f"/Users/mac/Desktop/BRIM-DATA/UCC_DASHBOARD/data/merged_tdf.csv",
+merged_df.to_csv(path_or_buf=f"/data/merged_tdf.csv",
                  index=False)

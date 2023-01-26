@@ -137,12 +137,12 @@ class ETL:
 
 
 # ETL Data
-etl = ETL('/Users/mac/Desktop/BRIM-DATA/UCC_DASHBOARD/data/KBE UCC 5 Years.xlsx')
+etl = ETL('/data/KBE UCC 5 Years.xlsx')
 extract = etl.extract()
 transform = etl.transform()
 etl.load('KBE_Transformed_DF')
 
-etl = ETL('/Users/mac/Desktop/BRIM-DATA/UCC_DASHBOARD/data/Brim UCC 5 Years.xlsx')
+etl = ETL('/data/Brim UCC 5 Years.xlsx')
 extract2 = etl.extract()
 transform2 = etl.transform()
 etl.load('Transformed_DF')
