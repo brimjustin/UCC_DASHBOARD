@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 # CSV to DF
-ucc_csv = Path(__file__).parents[1] / 'UCC_DASHBOARD/data/merged_tdf.csv'
+ucc_csv = Path(__file__).parents[1] / 'data/merged_tdf.csv'
 ucc_data = pd.read_csv(ucc_csv)
 
 

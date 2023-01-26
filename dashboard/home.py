@@ -12,7 +12,7 @@ def app():
     tdf = pd.read_csv(tdf_csv)
 
     # NH CSV to DF
-    nh_df_csv = Path(__file__).parents[1] / 'UCC_DASHBOARD/data/nh_df.csv'
+    nh_df_csv = Path(__file__).parents[1] / 'data/nh_df.csv'
     nh_df = pd.read_csv(nh_df_csv)
     tdf_dfm = tdf.query("brand != 'NEW HOLLAND' & brand != 'YANMAR'")
 
@@ -43,7 +43,7 @@ def app():
 # remove to run whole script necessary?? or Keep and add main() at the end (see chatgpt log)
 #     def main():
     # Add Brim Logo
-    brim_logo = Path(__file__).parents[1] / 'UCC_DASHBOARD/data/brimlogo3.png'
+    brim_logo = Path(__file__).parents[1] / 'data/brimlogo3.png'
     image = Image.open(brim_logo)
 
     # Create three columns for Logo to be centered

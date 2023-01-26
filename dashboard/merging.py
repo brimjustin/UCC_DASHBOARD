@@ -3,19 +3,19 @@ from pathlib import Path
 
 
 # TDF CSV to DF
-tdf_csv = Path(__file__).parents[1] / 'UCC_DASHBOARD/data/Transformed_DF.csv'
+tdf_csv = Path(__file__).parents[1] / 'data/Transformed_DF.csv'
 tdf = pd.read_csv(tdf_csv)
 
 # KDF CSV to DF
-kdf_csv = Path(__file__).parents[1] / 'UCC_DASHBOARD/data/kubota_hp.csv'
+kdf_csv = Path(__file__).parents[1] / 'data/kubota_hp.csv'
 kdf = pd.read_csv(kdf_csv)
 
 # DDF CSV to DF
-ddf_csv = Path(__file__).parents[1] / 'UCC_DASHBOARD/data/deere_hp.csv'
+ddf_csv = Path(__file__).parents[1] / 'data/deere_hp.csv'
 ddf = pd.read_csv(ddf_csv)
 
 # KBE CSV to DF
-kbe_csv = Path(__file__).parents[1] / 'UCC_DASHBOARD/data/KBE_Transformed_DF.csv'
+kbe_csv = Path(__file__).parents[1] / 'data/KBE_Transformed_DF.csv'
 kbe = pd.read_csv(kbe_csv)
 
 
