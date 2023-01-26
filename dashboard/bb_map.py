@@ -58,7 +58,7 @@ class PagesMapBuilder:
                                 tiles='cartodbpositron')
 
         # Load my geojson file which contains my Polygons
-        boundary_file = Path(__file__).parents[1] / 'UCC_DASHBOARD/data/georef-counties.geojson'
+        boundary_file = Path(__file__).parents[1] / 'data/georef-counties.geojson'
         with open(boundary_file, 'r') as f:
             latlon_boundary = json.load(f)
 
