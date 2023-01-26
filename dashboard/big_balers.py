@@ -14,7 +14,7 @@ def app():
     bb_df = mdf.loc[mdf['equip_size_descr'] == "SQUARE FOOTAGE 4' OR MORE"]
 
     # Page Title
-    st.markdown("<h1 style='text-align: center;height: 120px;'>BIG BALERS DASHBOARD</h1>",
+    st.markdown("<h1 style='text-align: center;height: 120px;'>BIG BALERS</h1>",
                 unsafe_allow_html=True)
 
     # First KPI Script
