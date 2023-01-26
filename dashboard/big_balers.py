@@ -80,7 +80,7 @@ def app():
                     unsafe_allow_html=True)
         selected = st.selectbox("Choose BRAND to show on map --***Click on point to see details***--",
                                 option_all)
-        st.components.v1.html(process_selection(selected), height=650)
+        st.components.v1.html(process_selection(selected), height=600)
     with fig_col2:
         bb_brand_shares = bb_brands.merge(market_share, left_index=True, right_index=True)
 
