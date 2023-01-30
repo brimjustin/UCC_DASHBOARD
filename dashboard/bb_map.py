@@ -144,12 +144,12 @@ class PagesMapBuilder:
                              <div style="display: flex; flex-direction: row; align-items: center;justify-content: left;">
                                <div style="height: 20px; width: 20px; margin-left: 5px; background-color: #f0cc04;
                                border-radius: 50%;"></div>
-                               <p style="margin-left: 5px;">KRONE: {}</p>
+                               <p style="margin-left: 5px;">NEW HOLLAND: {}</p>
                              </div>
                              <div style="display: flex; flex-direction: row; align-items: center;justify-content: left;">
                              <div style="height: 20px; width: 20px; margin-left: 5px; background-color: #0174aa;
                                border-radius: 50%;"></div>
-                               <p style="margin-left: 5px;">NEW HOLLAND: {}</p>
+                               <p style="margin-left: 5px;">KRONE: {}</p>
                              </div>
                              <div style="display: flex; flex-direction: row; align-items: center;justify-content: left;">
                              <div style="height: 20px; width: 20px; margin-left: 5px; background-color: #66cc00;
