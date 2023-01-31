@@ -40,8 +40,6 @@ def app():
     top_eqv_delta = dfm_subset.value_counts()
     eqv_delta_value = top_eqv_delta.iloc[0].astype(str)
 
-# remove to run whole script necessary?? or Keep and add main() at the end (see chatgpt log)
-#     def main():
     # Add Brim Logo
     brim_logo = Path(__file__).parents[1] / 'data/brimlogo3.png'
     image = Image.open(brim_logo)
