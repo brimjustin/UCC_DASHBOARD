@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-import home_map
+from dashboard.generators import home_map
 import streamlit.components.v1 as components
 from pathlib import Path
 from PIL import Image
@@ -19,6 +19,19 @@ def app():
     # Merge DFs
     dfm = pd.merge(tdf_dfm, nh_df, on='hp', how='right')
     dfm_subset = dfm[['brand', 'model_x', 'hp', 'model_y']]
+
+    # Add Brim Logo
+    brim_logo = Path(__file__).parents[1] / 'data/brimlogo3.png'
+    image = Image.open(brim_logo)
+
+    # Create three columns for Logo to be centered
+    one, two, three = st.columns(3)
+    one.empty()
+    two.image(image)
+    three.empty()
+
+    # Page Title
+    st.markdown("<h1 style='text-align: center;height: 120px;'>UCC DATA DASHBOARD</h1>", unsafe_allow_html=True)
 
     # First KPI script
     top_seller = tdf['model'].value_counts().nlargest(1).index
@@ -39,19 +52,6 @@ def app():
     top_eqv_select = top_eqv_model.split()[7]
     top_eqv_delta = dfm_subset.value_counts()
     eqv_delta_value = top_eqv_delta.iloc[0].astype(str)
-
-    # Add Brim Logo
-    brim_logo = Path(__file__).parents[1] / 'data/brimlogo3.png'
-    image = Image.open(brim_logo)
-
-    # Create three columns for Logo to be centered
-    one, two, three = st.columns(3)
-    one.empty()
-    two.image(image)
-    three.empty()
-
-    # Page Title
-    st.markdown("<h1 style='text-align: center;height: 120px;'>UCC DATA DASHBOARD</h1>", unsafe_allow_html=True)
 
     # Top KPI Columns
     kpi1, kpi2, kpi3 = st.columns(3)

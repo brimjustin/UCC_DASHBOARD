@@ -136,6 +136,7 @@ class MapBuilder:
                     popup=selected_popup
                 ).add_to(selected_m)
 
+        # Legend DF
         hps = ucc_data['hp'].value_counts()
 
         # Create marker for each group of markers

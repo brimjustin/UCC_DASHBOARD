@@ -118,7 +118,7 @@ class PagesMapBuilder:
                     popup=selected_popup
                 ).add_to(selected_m)
 
-        # EDIT FOR BIG BALER ETC
+        # Legend DF
         bb_count = m_data['brand'].value_counts()
 
         # Create marker for each group of markers

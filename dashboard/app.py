@@ -1,7 +1,6 @@
 import streamlit as st
+from dashboard.paginate import home, windrowers, big_balers
 from multipage import MultiPage
-import home
-import big_balers
 
 # Dashboard Config
 st.set_page_config(
@@ -16,6 +15,7 @@ app = MultiPage()
 # Add all your applications (pages) here
 app.add_page("All Data", home.app)
 app.add_page("Big Balers", big_balers.app)
+app.add_page('Windrowers', windrowers.app)
 
 # The main app
 app.run()

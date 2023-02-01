@@ -2,7 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 import pandas as pd
 from pathlib import Path
-import bb_map
+from dashboard.generators import bb_map
 
 
 def app():
@@ -18,18 +18,6 @@ def app():
                 unsafe_allow_html=True)
 
     # First KPI Script
-    bb_models = str(bb_df['model'].value_counts().nlargest(1))
-    bb_models_select = bb_models.split()[0]
-    bb_model_delta = bb_models.split()[1]
-
-    # Second KPI Script
-    bb_model_nh = str(bb_df['model'].value_counts().nlargest(3))
-    bb_model_nh_select = bb_model_nh.split()[2]
-    bb_model_nh_delta = bb_model_nh.split()[3]
-    # Third KPI Script
-    bb_brands = bb_df['brand'].value_counts()
-    bb_brands = bb_brands.to_frame()
-    bb_brands.columns = ['count']
     market_share1 = bb_df['brand'].value_counts(normalize=True)
     market_share2 = market_share1.apply(lambda x: "{:.0f}%".format(x * 100))
     market_share = market_share2.to_frame()
@@ -37,6 +25,16 @@ def app():
     market_value = str(market_share1)
     market_share_value = market_value.split()[0]
     market_share_delta = market_share2[0]
+
+    # Second KPI Script
+    bb_models = str(bb_df['model'].value_counts().nlargest(1))
+    bb_models_select = bb_models.split()[0]
+    bb_model_delta = bb_models.split()[1]
+
+    # Third KPI Script
+    bb_model_nh = str(bb_df['model'].value_counts().nlargest(3))
+    bb_model_nh_select = bb_model_nh.split()[2]
+    bb_model_nh_delta = bb_model_nh.split()[3]
 
     # KPI Metrics Columns
     kpi1, kpi2, kpi3 = st.columns(3)
@@ -68,6 +66,11 @@ def app():
         m = mb.pages_build_map(selection)
         m_ = m.get_root().render()
         return m_
+
+    # Column Script
+    bb_brands = bb_df['brand'].value_counts()
+    bb_brands = bb_brands.to_frame()
+    bb_brands.columns = ['count']
 
     # Two Columns in Middle of Dashboard
     fig_col1, fig_col2 = st.columns(2)
