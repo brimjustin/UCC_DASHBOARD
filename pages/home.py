@@ -1,6 +1,6 @@
 import pandas as pd
 import streamlit as st
-from dashboard.generators import home_map
+from generators import home_map
 import streamlit.components.v1 as components
 from pathlib import Path
 from PIL import Image

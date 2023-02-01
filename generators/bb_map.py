@@ -3,8 +3,7 @@ import folium
 from folium.elements import Element
 import pandas as pd
 from pathlib import Path
-from dashboard.generators import home_map
-
+from generators import home_map
 
 # CSV to DF
 ucc_csv = Path(__file__).parents[2] / 'data/merged_tdf.csv'
