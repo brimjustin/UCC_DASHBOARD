@@ -5,6 +5,8 @@ The UCC Dashboard is a tool for analyzing UCC data, featuring a map that display
 
 ![screenshot](data/Screenshot_home-page.png)
 ![screenshot](data/Screenshot_BB-page.png)
+![screenshot](data/Screenshot_WR-page.png)
+
 
 ## Used By
 
