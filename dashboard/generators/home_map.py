@@ -18,7 +18,7 @@ def get_center_latlon():
 
 
 # Create a style function
-def style_function(self):
+def style_function():
     return {
         'fillColor': 'white',
         'color': 'black',

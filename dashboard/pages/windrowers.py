@@ -2,7 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 import pandas as pd
 from pathlib import Path
-import bb_map
+from dashboard.pages import wr_map
 
 
 def app():
@@ -59,13 +59,13 @@ def app():
     )
 
     # Bring MapBuilder in and Process Selection to Map
-    # mb = bb_map.PagesMapBuilder()
+    mb = wr_map.PagesMapBuilder()
 
-    # @st.cache
-    # def process_selection(selection):
-    #     m = mb.pages_build_map(selection)
-    #     m_ = m.get_root().render()
-    #     return m_
+    @st.cache
+    def process_selection(selection):
+        m = mb.pages_build_map(selection)
+        m_ = m.get_root().render()
+        return m_
 
     # Column Script
     wr_brands = wr_df['brand'].value_counts()
