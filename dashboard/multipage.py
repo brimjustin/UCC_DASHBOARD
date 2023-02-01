@@ -32,7 +32,7 @@ class MultiPage:
     def run(self):
         # Dropdown to select the page to run
         page = st.sidebar.selectbox(
-            'Dashboard Navigation',
+            'Dashboard Page Navigation',
             self.pages,
             format_func=lambda page: page['title']
         )

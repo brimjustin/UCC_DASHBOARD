@@ -3,7 +3,7 @@ import folium
 from folium.elements import Element
 import pandas as pd
 from pathlib import Path
-from generators import home_map
+import home_map
 
 # CSV to DF
 ucc_csv = Path(__file__).parents[1] / 'data/merged_tdf.csv'
@@ -41,7 +41,7 @@ class PagesMapBuilder:
                                 tiles='cartodbpositron')
 
         # Load my geojson file which contains my Polygons
-        boundary_file = Path(__file__).parents[2] / 'data/georef-counties.geojson'
+        boundary_file = Path(__file__).parents[1] / 'data/georef-counties.geojson'
         with open(boundary_file, 'r') as f:
             latlon_boundary = json.load(f)
 

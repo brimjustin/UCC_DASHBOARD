@@ -3,10 +3,10 @@ import folium
 from folium.elements import Element
 import pandas as pd
 from pathlib import Path
-from generators import home_map
+import home_map
 
 # CSV to DF
-ucc_csv = Path(__file__).parents[2] / 'data/merged_tdf.csv'
+ucc_csv = Path(__file__).parents[1] / 'data/merged_tdf.csv'
 m_data = pd.read_csv(ucc_csv)
 m_data = m_data.loc[m_data['descr'] == "WINDROWER"]
 
@@ -43,7 +43,7 @@ class PagesMapBuilder:
                                 tiles='cartodbpositron')
 
         # Load my geojson file which contains my Polygons
-        boundary_file = Path(__file__).parents[2] / 'data/georef-counties.geojson'
+        boundary_file = Path(__file__).parents[1] / 'data/georef-counties.geojson'
         with open(boundary_file, 'r') as f:
             latlon_boundary = json.load(f)
 
@@ -117,7 +117,7 @@ class PagesMapBuilder:
         # Create HTML code for legend
         legend_html = '''
                            <div style="position: absolute;
-                                       top: 20px; right: 20px; width: 155px; height: 180px;
+                                       top: 20px; right: 20px; width: 155px; height: 205px;
                                        border:2px solid grey; z-index:9999; font-size:12px;
                                        background:rgba(255, 255, 255, 0.8);
                                        ">
