@@ -2,7 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 import pandas as pd
 from pathlib import Path
-from dashboard.pages import wr_map
+from dashboard.generators import wr_map
 
 
 def app():
