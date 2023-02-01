@@ -6,7 +6,7 @@ from pathlib import Path
 from generators import home_map
 
 # CSV to DF
-ucc_csv = Path(__file__).parents[2] / 'data/merged_tdf.csv'
+ucc_csv = Path(__file__).parents[1] / 'data/merged_tdf.csv'
 m_data = pd.read_csv(ucc_csv)
 m_data = m_data.loc[m_data['equip_size_descr'] == "SQUARE FOOTAGE 4' OR MORE"]
 
