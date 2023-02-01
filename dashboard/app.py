@@ -1,5 +1,7 @@
 import streamlit as st
-from dashboard import windrowers, home, big_balers
+import windrowers
+import home
+import big_balers
 from multipage import MultiPage
 
 # Dashboard Config
