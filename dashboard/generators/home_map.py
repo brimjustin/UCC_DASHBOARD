@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 # CSV to DF
-ucc_csv = Path(__file__).parents[0] / 'data/merged_tdf.csv'
+ucc_csv = Path(__file__).parents[2] / 'data/merged_tdf.csv'
 ucc_data = pd.read_csv(ucc_csv)
 
 
@@ -18,7 +18,7 @@ def get_center_latlon():
 
 
 # Create a style function
-def style_function():
+def style_function(self):
     return {
         'fillColor': 'white',
         'color': 'black',
@@ -80,7 +80,7 @@ class MapBuilder:
                                 tiles='cartodbpositron')
 
         # Load my geojson file which contains my Polygons
-        boundary_file = Path(__file__).parents[1] / 'data/georef-counties.geojson'
+        boundary_file = Path(__file__).parents[2] / 'data/georef-counties.geojson'
         with open(boundary_file, 'r') as f:
             latlon_boundary = json.load(f)
 

@@ -8,11 +8,11 @@ from PIL import Image
 
 def app():
     # UCC Data CSV to DF
-    tdf_csv = Path(__file__).parents[1] / 'data/merged_tdf.csv'
+    tdf_csv = Path(__file__).parents[2] / 'data/merged_tdf.csv'
     tdf = pd.read_csv(tdf_csv)
 
     # NH CSV to DF
-    nh_df_csv = Path(__file__).parents[1] / 'data/nh_df.csv'
+    nh_df_csv = Path(__file__).parents[2] / 'data/nh_df.csv'
     nh_df = pd.read_csv(nh_df_csv)
     tdf_dfm = tdf.query("brand != 'NEW HOLLAND' & brand != 'YANMAR'")
 
@@ -21,7 +21,7 @@ def app():
     dfm_subset = dfm[['brand', 'model_x', 'hp', 'model_y']]
 
     # Add Brim Logo
-    brim_logo = Path(__file__).parents[1] / 'data/brimlogo3.png'
+    brim_logo = Path(__file__).parents[2] / 'data/brimlogo3.png'
     image = Image.open(brim_logo)
 
     # Create three columns for Logo to be centered

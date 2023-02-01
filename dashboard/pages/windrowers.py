@@ -7,7 +7,7 @@ from dashboard.generators import wr_map
 
 def app():
     # UCC Data CSV to DF
-    mdf_csv = Path(__file__).parents[1] / 'data/merged_tdf.csv'
+    mdf_csv = Path(__file__).parents[2] / 'data/merged_tdf.csv'
     mdf = pd.read_csv(mdf_csv)
 
     # Make UCC Data just Big Balers
