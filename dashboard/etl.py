@@ -136,13 +136,13 @@ class ETL:
                        index=False)
 
 
-# ETL Data
-etl = ETL('/data/KBE UCC 5 Years.xlsx')
-extract = etl.extract()
-transform = etl.transform()
-etl.load('KBE_Transformed_DF')
+if __name__ == '__main__':
+    etl = ETL('/data/KBE UCC 5 Years.xlsx')
+    extract = etl.extract()
+    transform = etl.transform()
+    etl.load('KBE_Transformed_DF')
 
-etl = ETL('/data/Brim UCC 5 Years.xlsx')
-extract2 = etl.extract()
-transform2 = etl.transform()
-etl.load('Transformed_DF')
+    etl = ETL('/data/Brim UCC 5 Years.xlsx')
+    extract2 = etl.extract()
+    transform2 = etl.transform()
+    etl.load('Transformed_DF')
